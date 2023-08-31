@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={jost.className}>
-      <body className="min-h-screen bg-white leading-relaxed">
+      <body className="isolate min-h-screen bg-white leading-relaxed">
         <Header />
         {children}
       </body>
