@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import IconHamburger from "./svgs/IconHamburger";
-import IconClose from "./svgs/IconClose";
+import SvgIconHamburger from "./svgs/IconHamburger";
+import SvgIconClose from "./svgs/IconClose";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 
@@ -16,9 +16,9 @@ const MobileNav = () => {
         className="ml-auto md:hidden"
       >
         {navOpen ? (
-          <IconClose className="fill-neutral-800" />
+          <SvgIconClose className="fill-neutral-800" />
         ) : (
-          <IconHamburger className="fill-neutral-800" />
+          <SvgIconHamburger className="fill-neutral-800" />
         )}
       </button>
       {navOpen &&

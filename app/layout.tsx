@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const jost = Jost({ subsets: ["latin"], weight: ["400", "500"] });
 
@@ -17,9 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={jost.className}>
-      <body className="isolate min-h-screen bg-white leading-relaxed">
+      <body className="isolate grid min-h-screen grid-rows-[auto_1fr_auto] bg-white leading-relaxed">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

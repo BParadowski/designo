@@ -27,6 +27,7 @@ const config: Config = {
       padding: { DEFAULT: "1.5rem", sm: "2.5rem", lg: "4rem", "2xl": "6rem" },
     },
   },
+  important: true,
   plugins: [],
 };
 export default config;
