@@ -10,9 +10,21 @@ const Header = () => {
         <div className="flex h-[--header-height] items-center ">
           <Image src={logo} alt="designo logo" className="max-h-7 w-auto" />
           <nav className="ml-auto hidden gap-8 text-sm uppercase tracking-widest text-neutral-800 md:flex">
-            <Link href="/about">our company</Link>
-            <Link href="/locations">locations</Link>
-            <Link href="/contact">contact</Link>
+            <Link className="underline-offset-2 hover:underline" href="/about">
+              our company
+            </Link>
+            <Link
+              className="underline-offset-2 hover:underline"
+              href="/locations"
+            >
+              locations
+            </Link>
+            <Link
+              className="underline-offset-2 hover:underline"
+              href="/contact"
+            >
+              contact
+            </Link>
           </nav>
           <MobileNav />
         </div>

@@ -26,8 +26,17 @@ const config: Config = {
       center: true,
       padding: { DEFAULT: "1.5rem", sm: "2.5rem", lg: "4rem", "2xl": "6rem" },
     },
+    extend: {
+      maxWidth: {
+        "text-narrow": "45ch",
+      },
+      backgroundImage: {
+        "cta-pattern":
+          "url('/assets/shared/desktop/bg-pattern-call-to-action.svg')",
+      },
+    },
   },
-  important: true,
+
   plugins: [],
 };
 export default config;
