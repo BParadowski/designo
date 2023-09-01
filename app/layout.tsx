@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={jost.className}>
-      <body className="isolate grid min-h-screen grid-rows-[auto_1fr_auto] bg-white leading-relaxed">
+      <body className=" grid min-h-screen grid-rows-[auto_1fr_auto] bg-white leading-relaxed">
         <Header />
         {children}
         <Footer />

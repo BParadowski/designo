@@ -9,7 +9,7 @@ const CtaCard = () => {
       </div>
       <div className="container z-10">
         <div
-          className=" bg-cta-pattern grid gap-8 rounded-2xl bg-primary-700 bg-center bg-no-repeat 
+          className=" grid gap-8 rounded-2xl bg-primary-700 bg-cta-pattern bg-center bg-no-repeat 
                      px-6 py-16 text-white md:p-16 lg:grid-flow-col lg:bg-right xl:px-24 xl:py-16"
         >
           <div className="grid justify-center  text-center lg:justify-self-start lg:text-start">
@@ -17,7 +17,7 @@ const CtaCard = () => {
               Let’s talk about <br />
               your project
             </p>
-            <p className="line max-w-text-narrow mt-4">
+            <p className="line mt-4 max-w-text-narrow">
               Ready to take it to the next level? Contact us today and find out
               how our expertise can help your business grow.
             </p>
