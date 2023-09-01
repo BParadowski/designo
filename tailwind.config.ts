@@ -33,6 +33,11 @@ const config: Config = {
       backgroundImage: {
         "cta-pattern":
           "url('/assets/shared/desktop/bg-pattern-call-to-action.svg')",
+        "small-circle":
+          "url('/assets/shared/desktop/bg-pattern-small-circle.svg')",
+      },
+      letterSpacing: {
+        huge: "0.25em",
       },
     },
   },

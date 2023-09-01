@@ -1,10 +1,11 @@
 import CtaCard from "./components/shared/CtaCard";
+import DesignerQualities from "./components/home/DesignerQualities";
 
 export default function Home() {
   return (
     <>
       <main>
-        <div className="container">
+        <div className="container mb-28 grid gap-y-28 md:mb-16 lg:mb-40 lg:gap-y-40">
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
             enim libero error obcaecati deserunt at laudantium! Aut iusto
@@ -25,6 +26,7 @@ export default function Home() {
             tempora! Hic quibusdam ab id explicabo sit iste soluta quidem magnam
             animi nostrum nemo, quos dignissimos, vero quis!
           </p>
+          <DesignerQualities />
         </div>
       </main>
 
