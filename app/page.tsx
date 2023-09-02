@@ -5,25 +5,25 @@ import Image from "next/image";
 import heroImage from "/public/assets/home/desktop/image-hero-phone.png";
 import Button from "./components/shared/Button";
 import Link from "next/link";
+import leaf from "/public/assets/shared/desktop/bg-pattern-leaf.svg";
 
 export default function Home() {
   return (
     <>
       <main>
-        <div className="mb-32 sm:container lg:mb-40">
+        {/* Hero */}
+        <div className="relative mb-32 sm:container lg:mb-40">
           <div
             className="overflow-hidden bg-primary-700 bg-hero-pattern 
                        bg-left bg-no-repeat sm:rounded-2xl sm:bg-[position:6rem] md:bg-[position:10rem] lg:bg-right-top"
           >
-            <div className=" grid justify-items-center pt-20 lg:grid-flow-col lg:pt-0 xl:grid-cols-[1fr_auto]">
+            <div className="grid justify-items-center px-6 pt-20 sm:px-0 lg:grid-flow-col lg:pt-0 xl:grid-cols-[1fr_auto]">
               <div
                 className="grid justify-items-center gap-6 text-center text-white lg:place-content-center 
                 lg:justify-items-start lg:pl-16 lg:text-start xl:gap-10 "
               >
-                <h1 className="text-4xl font-medium md:text-5xl lg:text-4xl xl:text-5xl">
-                  Award-winning custom
-                  <br /> designs and digital
-                  <br /> branding solutions
+                <h1 className="max-w-text-heading text-4xl font-medium md:text-5xl lg:text-4xl xl:text-5xl">
+                  Award-winning custom designs and digital branding solutions
                 </h1>
                 <p className="max-w-text-narrow">
                   With over 10 years in the industry, we are experienced in
@@ -44,8 +44,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <Image
+            alt=""
+            src={leaf}
+            className="invisible absolute -bottom-72 -left-40 -z-50 lg:visible lg:max-w-4xl  xl:max-w-none"
+          />
         </div>
-
+        {/* Links to designs */}
         <div className="container mb-28 grid gap-y-28 md:mb-16 lg:mb-40 lg:gap-y-40">
           <div className="grid gap-y-6 lg:grid-cols-2 lg:gap-x-8">
             <ImageLink
@@ -58,8 +63,14 @@ export default function Home() {
             <ImageLink destination="appDesign" />
             <ImageLink destination="graphicDesign" />
           </div>
-
-          <DesignerQualities />
+          <div className="relative">
+            <DesignerQualities />
+            <Image
+              alt=""
+              src={leaf}
+              className="invisible absolute -right-40 top-32 -z-50 rotate-180 lg:visible lg:max-w-4xl xl:max-w-none"
+            />
+          </div>
         </div>
       </main>
 

@@ -29,6 +29,7 @@ const config: Config = {
     extend: {
       maxWidth: {
         "text-narrow": "45ch",
+        "text-heading": "20ch",
       },
       backgroundImage: {
         "cta-pattern":
