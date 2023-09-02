@@ -4,6 +4,7 @@ import ImageLink from "./components/shared/ImageLink";
 import Image from "next/image";
 import heroImage from "/public/assets/home/desktop/image-hero-phone.png";
 import Button from "./components/shared/Button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
             className="overflow-hidden bg-primary-700 bg-hero-pattern 
                        bg-left bg-no-repeat sm:rounded-2xl sm:bg-[position:6rem] md:bg-[position:10rem] lg:bg-right-top"
           >
-            <div className=" grid justify-items-center pt-20 lg:grid-flow-col lg:pt-5 xl:grid-cols-[1fr_auto] xl:pt-0">
+            <div className=" grid justify-items-center pt-20 lg:grid-flow-col lg:pt-0 xl:grid-cols-[1fr_auto]">
               <div
                 className="grid justify-items-center gap-6 text-center text-white lg:place-content-center 
                 lg:justify-items-start lg:pl-16 lg:text-start xl:gap-10 "
@@ -29,9 +30,9 @@ export default function Home() {
                   creating fully responsive websites, app design, and engaging
                   brand experiences. Find out more about our services.
                 </p>
-                <Button theme="neutral" href="/about" className="z-10">
-                  learn more
-                </Button>
+                <Link className="z-10" href="/about">
+                  <Button theme="neutral">learn more</Button>
+                </Link>
               </div>
               <div className="z-0 w-fit">
                 <Image
