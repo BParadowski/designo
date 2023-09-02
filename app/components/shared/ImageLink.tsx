@@ -73,7 +73,7 @@ const ImageLink = ({
             <SvgIconRightArrow className="ml-4 inline stroke-primary-700" />
           </p>
         </div>
-        <div className="invisible z-10 col-span-full row-span-full h-full w-full bg-primary-700 opacity-50 group-hover:visible" />
+        <div className="z-10 col-span-full row-span-full h-full w-full bg-black opacity-70 transition-colors group-hover:bg-primary-700" />
       </div>
     </Link>
   );

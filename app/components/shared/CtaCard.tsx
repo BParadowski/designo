@@ -23,7 +23,7 @@ const CtaCard = () => {
             </p>
           </div>
           <div className="place-self-center lg:justify-self-end">
-            <Button type="neutral">get in touch</Button>
+            <Button theme="neutral">get in touch</Button>
           </div>
         </div>
       </div>

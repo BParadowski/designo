@@ -3,13 +3,6 @@ import passionate from "public/assets/home/desktop/illustration-passionate.svg";
 import resourceful from "public/assets/home/desktop/illustration-resourceful.svg";
 import Image from "next/image";
 
-interface CardProps {
-  imgSrc: any;
-  bgRotate?: "counterclockwise" | "clockwise";
-  title: string;
-  text: string;
-}
-
 const DesignerQualities = () => {
   return (
     <div className="grid gap-y-20 md:gap-y-8 lg:grid-cols-3 lg:gap-x-8">
@@ -42,6 +35,16 @@ const DesignerQualities = () => {
 
 export default DesignerQualities;
 
+interface CardProps {
+  imgSrc: any;
+  /**
+   * Allows to rotate the gradient in the image background 90 degrees.
+   */
+  bgRotate?: "counterclockwise" | "clockwise";
+  title: string;
+  text: string;
+}
+
 const Card = ({ imgSrc, bgRotate, title, text }: CardProps) => {
   let rotation = "";
   if (bgRotate) {
@@ -57,12 +60,12 @@ const Card = ({ imgSrc, bgRotate, title, text }: CardProps) => {
       <div className="relative md:row-span-2 lg:row-auto">
         <div
           className={
-            "bg-small-circle absolute inset-x-0 inset-y-0 -z-10 " + rotation
+            "absolute inset-x-0 inset-y-0 -z-10 bg-small-circle " + rotation
           }
         />
         <Image src={imgSrc} alt={`A picture of a ${title} designer`}></Image>
       </div>
-      <p className="tracking-huge text-xl font-medium uppercase md:self-end lg:self-auto">
+      <p className="text-xl font-medium uppercase tracking-huge md:self-end lg:self-auto">
         {title}
       </p>
       <p className="max-w-text-narrow">{text}</p>
