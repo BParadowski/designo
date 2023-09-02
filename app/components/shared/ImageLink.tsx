@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Picture from "./Picture";
 import SvgIconRightArrow from "../svgs/IconRightArrow";
+import { ComponentProps } from "react";
 
 const data = {
   imageUrls: {
@@ -12,7 +13,7 @@ const data = {
     webDesign: {
       base: "/assets/home/mobile/image-web-design.jpg",
       sm: "/assets/home/tablet/image-web-design.jpg",
-      lg: "/assets/home/desktop/image-web-design.jpg",
+      lg: "/assets/home/desktop/image-web-design-small.jpg",
     },
     graphicDesign: {
       base: "/assets/home/mobile/image-graphic-design.jpg",
@@ -32,16 +33,35 @@ const data = {
   },
 };
 
-interface ImageLinkProps {
-  destination: "webDesign" | "appDesign" | "graphicDesign";
+interface AlternativeUrls {
+  base?: string;
+  sm?: string;
+  md?: string;
+  lg?: string;
+  xl?: string;
 }
 
-const ImageLink = ({ destination }: ImageLinkProps) => {
+interface ImageLinkProps {
+  destination: "webDesign" | "appDesign" | "graphicDesign";
+  className?: ComponentProps<"a">["className"];
+  /**
+   * Allows to replace default images used within the component.
+   * @param {AlternativeUrls} urls - object defining new url {base?, sm?, md?, lg?, xl?}
+   */
+  alternativeUrls?: AlternativeUrls;
+}
+
+const ImageLink = ({
+  destination,
+  className,
+  alternativeUrls,
+}: ImageLinkProps) => {
   return (
-    <Link href={data.destinationUrls[destination]}>
+    <Link href={data.destinationUrls[destination]} className={className}>
       <div className="group grid items-center overflow-hidden rounded-2xl">
         <Picture
           {...data.imageUrls[destination]}
+          {...alternativeUrls}
           className="z-0 col-span-full row-span-full"
         ></Picture>
         <div className="z-20 col-span-full row-span-full  text-center uppercase text-white ">

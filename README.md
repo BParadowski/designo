@@ -20,3 +20,5 @@ npm install -D prettier prettier-plugin-tailwindcss
 ```
 ComponentProps<"picture">["className"]
 ```
+
+7. JS docs look like a lot of fun, maybe worth looking into them?

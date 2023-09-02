@@ -27,7 +27,18 @@ export default function Home() {
             tempora! Hic quibusdam ab id explicabo sit iste soluta quidem magnam
             animi nostrum nemo, quos dignissimos, vero quis!
           </p>
-          <ImageLink destination="appDesign" />
+          <div className="grid gap-y-6 lg:grid-cols-2 lg:gap-x-8">
+            <ImageLink
+              destination="webDesign"
+              alternativeUrls={{
+                lg: "/assets/home/desktop/image-web-design-large.jpg",
+              }}
+              className="lg:row-span-2"
+            />
+            <ImageLink destination="appDesign" />
+            <ImageLink destination="graphicDesign" />
+          </div>
+
           <DesignerQualities />
         </div>
       </main>
