@@ -9,7 +9,7 @@ npm install -D prettier prettier-plugin-tailwindcss
 
 ```
 
-2. Use next/fonts to self-host a google font in layout.tsx;
+2. Use next/fonts to self-host a google font in layout.tsx.
 
 3. Svgr is having a lot of unexpected behaviour unless used in CLI version. Simply copy and past the svgs changed into components.
 
@@ -18,7 +18,11 @@ npm install -D prettier prettier-plugin-tailwindcss
 ## Css
 
 1. Some svgs use "stroke" attribute instead of "fill"
+
 2. To add custom classes that work with tailwind modifiers (like :hover etc.) you need to use **@layer base/components/utilities** directive in the global css file.
+
+3. Percentage values in `background-position-x/y` property are based on relation of background size to the element size. For instance if the background image is _larger_ than the element, positive values move the image to the _left_. If the background image is _smaller_ however, positive values move it _right_... Due to this behavior they are a bad choice in reponsive designes. **Best stick to
+   flat numbers for individual container sizes**. In this case they simply mean offset from left or top.
 
 ### **Unwieldy images**
 
