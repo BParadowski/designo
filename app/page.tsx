@@ -1,5 +1,6 @@
 import CtaCard from "./components/shared/CtaCard";
 import DesignerQualities from "./components/home/DesignerQualities";
+import ImageLink from "./components/shared/ImageLink";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
             tempora! Hic quibusdam ab id explicabo sit iste soluta quidem magnam
             animi nostrum nemo, quos dignissimos, vero quis!
           </p>
+          <ImageLink destination="appDesign" />
           <DesignerQualities />
         </div>
       </main>

@@ -43,7 +43,7 @@ const DesignerQualities = () => {
 export default DesignerQualities;
 
 const Card = ({ imgSrc, bgRotate, title, text }: CardProps) => {
-  let rotation;
+  let rotation = "";
   if (bgRotate) {
     rotation = bgRotate === "clockwise" ? "rotate-90" : "-rotate-90";
   }
@@ -60,7 +60,7 @@ const Card = ({ imgSrc, bgRotate, title, text }: CardProps) => {
             "bg-small-circle absolute inset-x-0 inset-y-0 -z-10 " + rotation
           }
         />
-        <Image src={imgSrc} alt="A picture of a passionate designer"></Image>
+        <Image src={imgSrc} alt={`A picture of a ${title} designer`}></Image>
       </div>
       <p className="tracking-huge text-xl font-medium uppercase md:self-end lg:self-auto">
         {title}
