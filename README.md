@@ -6,7 +6,6 @@
 
 ```
 npm install -D prettier prettier-plugin-tailwindcss
-
 ```
 
 2. Use next/fonts to self-host a google font in layout.tsx.
@@ -17,12 +16,13 @@ npm install -D prettier prettier-plugin-tailwindcss
 
 ## Css
 
-1. Some svgs use "stroke" attribute instead of "fill"
+1. Some svgs use "stroke" attribute instead of "fill".
 
 2. To add custom classes that work with tailwind modifiers (like :hover etc.) you need to use **@layer base/components/utilities** directive in the global css file.
 
-3. Percentage values in `background-position-x/y` property are based on relation of background size to the element size. For instance if the background image is _larger_ than the element, positive values move the image to the _left_. If the background image is _smaller_ however, positive values move it _right_... Due to this behavior they are a bad choice in reponsive designes. **Best stick to
-   flat numbers for individual container sizes**. In this case they simply mean offset from left or top.
+3. Percentage values in `background-position-x/y` property are based on relation of background size to the element size. For instance if the background image is _larger_ than the element, positive values move the image to the _left_. If the background image is _smaller_ however, positive values move it _right_... Due to this behavior they are a bad choice in reponsive designes. **Best stick to flat numbers for individual container sizes**. In this case they simply mean offset from left or top.
+
+4. Using `isolation: isolate` on components might be a good idea to avoid z-index problems.
 
 ### **Unwieldy images**
 
@@ -32,8 +32,8 @@ Css margin property takes a percentage argument which referes to the percentage 
 
 Thus to cut off the bottom third of an image with an aspect ration of 526/768 (phone picture in hero component of this project) we can calculate as follows:
 
-526 _ margin = 768 / 3\
-526 _ margin = 256\
+526 \* margin = 768 / 3\
+526 \* margin = 256\
 margin = 256/526\
 margin = 0.4867\
 margin = 48.67%
@@ -55,3 +55,7 @@ ComponentProps<"picture">["className"]
 ```
 
 2. JS docs look like a lot of fun.
+
+## VsCode
+
+1. `ctrl + d` lets you select the next occurance of a selected string.

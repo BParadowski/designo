@@ -10,7 +10,7 @@ import leaf from "/public/assets/shared/desktop/bg-pattern-leaf.svg";
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="isolate">
         {/* Hero */}
         <div className="relative mb-32 sm:container lg:mb-40">
           <div

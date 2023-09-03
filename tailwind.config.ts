@@ -37,6 +37,12 @@ const config: Config = {
         "small-circle":
           "url('/assets/shared/desktop/bg-pattern-small-circle.svg')",
         "hero-pattern": "url('/assets/home/desktop/bg-pattern-hero-home.svg')",
+        "intro-web-design":
+          "url('/assets/web-design/desktop/bg-pattern-intro-web.svg')",
+        "intro-app-design":
+          "url('/assets/app-design/desktop/bg-pattern-intro-app.svg')",
+        "intro-graphic-design":
+          "url('/assets/graphic-design/desktop/bg-pattern-intro-graphic.svg')",
       },
       letterSpacing: {
         huge: "0.25em",

@@ -2,7 +2,7 @@ import Button from "./Button";
 
 const CtaCard = () => {
   return (
-    <div className="relative grid">
+    <div className="relative isolate grid">
       <div className="absolute inset-x-0 inset-y-0 z-0  grid md:grid-rows-[3fr_1fr]">
         <div></div>
         <div className="bg-black"></div>
