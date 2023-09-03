@@ -100,6 +100,16 @@ interface ResponsiveUrls extends OptionalResponsiveUrls {
 // "base" is not optional in ResponsiveUrls
 ```
 
+7. To type keys on an object you can use **mapped types**. They are useful when you want to limit keys to contents of a union (usually derived with _keyof_ operator)
+
+```
+// type Slug = "web-design" | "app-design" | "graphic-design"
+
+type AllLinksData = {
+  [K in Slug]: LinkData;
+};
+```
+
 ## VsCode
 
 1. `ctrl + d` lets you select the next occurance of a selected string.
