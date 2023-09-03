@@ -80,6 +80,26 @@ type Slug = (typeof slugs)[number];
 
 4. JS docs look like a lot of fun.
 
+5. The main difference betweeen types (_type aliases_) and interfaces in TypeScript is that types can't be reopened to change them. In contrast to that, interfaces can be always extended.
+
+6. When extending an interface (or intersecting types) properties get overwritten:
+
+```
+interface OptionalResponsiveUrls {
+  base?: string;
+  sm?: string;
+  md?: string;
+  lg?: string;
+  xl?: string;
+}
+
+interface ResponsiveUrls extends OptionalResponsiveUrls {
+  base: string;
+}
+
+// "base" is not optional in ResponsiveUrls
+```
+
 ## VsCode
 
 1. `ctrl + d` lets you select the next occurance of a selected string.

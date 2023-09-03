@@ -1,13 +1,11 @@
 import pageData from "./pageData";
-import { Slug } from "./pageData";
+import { Slug, slugs } from "./pageData";
 import CtaCard from "@/app/components/shared/CtaCard";
 
-export function generateStaticParams(): { slug: Slug }[] {
-  return [
-    { slug: "web-design" },
-    { slug: "app-design" },
-    { slug: "graphic-design" },
-  ];
+export function generateStaticParams() {
+  return slugs.map((slug) => {
+    return { slug };
+  });
 }
 
 export default function Designs({ params }: { params: { slug: Slug } }) {

@@ -54,14 +54,14 @@ export default function Home() {
         <div className="container mb-28 grid gap-y-28 md:mb-16 lg:mb-40 lg:gap-y-40">
           <div className="grid gap-y-6 lg:grid-cols-2 lg:gap-x-8">
             <ImageLink
-              destination="webDesign"
+              destination="web-design"
               alternativeUrls={{
                 lg: "/assets/home/desktop/image-web-design-large.jpg",
               }}
               className="lg:row-span-2"
             />
-            <ImageLink destination="appDesign" />
-            <ImageLink destination="graphicDesign" />
+            <ImageLink destination="app-design" />
+            <ImageLink destination="graphic-design" />
           </div>
           <div className="relative">
             <DesignerQualities />
