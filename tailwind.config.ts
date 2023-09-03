@@ -10,6 +10,7 @@ const config: Config = {
     colors: {
       "primary-700": "#E7816B",
       "primary-300": "#FFAD9B",
+      "primary-100": "#FDF3F0",
       black: "#1D1C1E",
       white: " #FFFFFF",
       "neutral-800": "#333136",
@@ -37,6 +38,10 @@ const config: Config = {
         "small-circle":
           "url('/assets/shared/desktop/bg-pattern-small-circle.svg')",
         "hero-pattern": "url('/assets/home/desktop/bg-pattern-hero-home.svg')",
+        "design-pages-intro-mobile":
+          "url('/assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg')",
+        "design-pages-intro-tablet":
+          "url('/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg')",
         "intro-web-design":
           "url('/assets/web-design/desktop/bg-pattern-intro-web.svg')",
         "intro-app-design":

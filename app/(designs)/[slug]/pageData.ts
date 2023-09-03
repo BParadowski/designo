@@ -27,16 +27,18 @@ type Card = {
   description: string;
 };
 
-interface PageData {
-  slug: Slug;
+type PageData = {
   title: string;
   introduction: string;
   cards: Card[];
-}
+};
 
-const pageData: PageData[] = [
-  {
-    slug: "web-design",
+type AllPagesData = {
+  [K in Slug]: PageData;
+};
+
+const allPagesData: AllPagesData = {
+  "web-design": {
     title: "web design",
     introduction:
       "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
@@ -79,8 +81,7 @@ const pageData: PageData[] = [
       },
     ],
   },
-  {
-    slug: "app-design",
+  "app-design": {
     title: "app design",
     introduction:
       "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.",
@@ -116,8 +117,7 @@ const pageData: PageData[] = [
       },
     ],
   },
-  {
-    slug: "graphic-design",
+  "graphic-design": {
     title: "graphic design",
     introduction:
       "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
@@ -141,6 +141,6 @@ const pageData: PageData[] = [
       },
     ],
   },
-];
+};
 
-export default pageData;
+export default allPagesData;

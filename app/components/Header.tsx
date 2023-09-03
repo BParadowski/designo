@@ -8,7 +8,9 @@ const Header = () => {
     <header>
       <div className="container">
         <div className="flex h-[--header-height] items-center ">
-          <Image src={logo} alt="designo logo" className="max-h-7 w-auto" />
+          <Link href="/">
+            <Image src={logo} alt="designo logo" className="max-h-7 w-auto" />
+          </Link>
           <nav className="ml-auto hidden gap-8 text-sm uppercase tracking-widest text-neutral-800 md:flex">
             <Link className="underline-offset-2 hover:underline" href="/about">
               our company
