@@ -54,7 +54,31 @@ If a part of the image clipped in this way overlaps some other element it is nec
 ComponentProps<"picture">["className"]
 ```
 
-2. JS docs look like a lot of fun.
+2. You can use an indexed access type (`[]`) to look up a specific property on another type:
+
+```
+const fruit = {
+  name: "Apple",
+  price: 4,
+  available: true
+}
+
+type Price = typeof fruit["price"] // type Price = number
+```
+
+The indexing type is itself a type, so we can use unions, keyof, or other types entirely (from this project @app/designs/[slug]/pageData.ts):
+
+```
+const slugs = ["web-design", "app-design", "graphic-design"] as const;
+
+type Slug = (typeof slugs)[number];
+```
+
+3. Type assertion - `as` let's you give TypeScript information about the type that it couldn't have otherwise. In the example above `as const` changes the type of _slugs_ from `string[]` to an array of literals with readonly property: `slugs: readonly ["web-design", "app-design", "graphic-design"]`.
+
+   TypeScript only allows assertions that convert to _more specific_ or _less specific_ version of the type. For instance: you can't convert a string into a number.
+
+4. JS docs look like a lot of fun.
 
 ## VsCode
 
