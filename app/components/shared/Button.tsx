@@ -11,7 +11,7 @@ interface StyledButtonProps {
 
 const themes = {
   primary:
-    "rounded-lg bg-primary-700 px-6 py-4 text-center font-medium uppercase tracking-widest  text-white hover:bg-primary-300",
+    "rounded-lg bg-primary-700 px-6 py-4 text-center font-medium uppercase tracking-widest text-white hover:bg-primary-300",
   neutral:
     "rounded-lg bg-white px-6 py-4 text-center font-medium uppercase tracking-widest text-black hover:bg-primary-300 hover:text-white",
 };

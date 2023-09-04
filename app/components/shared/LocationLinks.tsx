@@ -7,19 +7,7 @@ import Image from "next/image";
 
 const LocationLinks = () => {
   return (
-    <div className="container grid gap-y-20 text-center lg:grid-cols-3">
-      <div className="grid justify-items-center ">
-        <div className="relative">
-          <div className="absolute inset-x-0 inset-y-0 bg-small-circle" />
-          <Image alt="" src={australia} />
-        </div>
-        <p className="mt-12 text-xl font-medium uppercase tracking-huge">
-          Australia
-        </p>
-        <Link href="/locations" className="mt-8">
-          <Button theme="primary">see location</Button>
-        </Link>
-      </div>
+    <div className="grid gap-y-20 text-center lg:grid-cols-3">
       <div className="grid justify-items-center">
         <div className="relative">
           <div className="absolute inset-x-0 inset-y-0 rotate-90 bg-small-circle" />
@@ -32,6 +20,20 @@ const LocationLinks = () => {
           <Button theme="primary">see location</Button>
         </Link>
       </div>
+
+      <div className="grid justify-items-center ">
+        <div className="relative">
+          <div className="absolute inset-x-0 inset-y-0 bg-small-circle" />
+          <Image alt="" src={australia} />
+        </div>
+        <p className="mt-12 text-xl font-medium uppercase tracking-huge">
+          Australia
+        </p>
+        <Link href="/locations" className="mt-8">
+          <Button theme="primary">see location</Button>
+        </Link>
+      </div>
+
       <div className="grid justify-items-center">
         <div className="relative">
           <div className="absolute inset-x-0 inset-y-0 -rotate-90 bg-small-circle" />

@@ -84,7 +84,7 @@ export default function About() {
         <div className="sm:container">
           <div
             className="bg-primary-100 bg-three-circles lg:grid-col-[fit-content_1fr] lg:bg-two-circles grid overflow-hidden
-                            bg-[position:left_bottom_-2rem] bg-no-repeat sm:rounded-xl sm:bg-[position:left_4rem_bottom_3rem] lg:grid-flow-col lg:bg-left-bottom"
+            bg-[position:left_bottom_-2rem] bg-no-repeat sm:rounded-xl sm:bg-[position:left_4rem_bottom_3rem] lg:grid-flow-col lg:bg-left-bottom"
           >
             <Picture
               base="/assets/about/mobile/image-real-deal.jpg"

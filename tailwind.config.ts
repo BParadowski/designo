@@ -15,6 +15,7 @@ const config: Config = {
       white: " #FFFFFF",
       "neutral-800": "#333136",
       "neutral-300": "#F1F3F5",
+      transparent: "transparent"
     },
     container: {
       screens: {
@@ -56,6 +57,10 @@ const config: Config = {
           "url('/assets/about/mobile/bg-pattern-hero-about-mobile.svg')",
         "about-hero-tablet":
           "url('/assets/about/desktop/bg-pattern-hero-about-desktop.svg')",
+        "contact-pattern-mobile":
+          "url('/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg')",
+        "contact-pattern-tablet":
+          "url('/assets/contact/desktop/bg-pattern-hero-desktop.svg')",
       },
       letterSpacing: {
         huge: "0.25em",

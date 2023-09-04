@@ -53,7 +53,7 @@ const Card = ({ imgSrc, bgRotate, title, text }: CardProps) => {
 
   return (
     <div
-      className="grid place-items-center gap-8  text-center md:grid-cols-[auto_1fr] 
+      className="grid place-items-center gap-8  text-center md:grid-cols-[auto_1fr]
                     md:grid-rows-[auto_auto] md:place-items-start md:gap-x-10 md:gap-y-4 md:text-start
                     lg:grid-cols-none lg:grid-rows-none lg:place-items-center lg:gap-8 lg:text-center"
     >
