@@ -15,7 +15,7 @@ const bgImageStyling = {
   "app-design": "lg:bg-intro-app-design lg:bg-[position:-4rem]",
   "web-design": "lg:bg-intro-web-design",
   "graphic-design": "lg:bg-intro-graphic-design lg:bg-[position:-4rem]",
-} as const;
+};
 
 export default function Designs({ params }: { params: { slug: Slug } }) {
   const data = allPagesData[params.slug];

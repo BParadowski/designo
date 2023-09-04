@@ -48,6 +48,10 @@ const config: Config = {
           "url('/assets/app-design/desktop/bg-pattern-intro-app.svg')",
         "intro-graphic-design":
           "url('/assets/graphic-design/desktop/bg-pattern-intro-graphic.svg')",
+        "about-hero-mobile":
+          "url('/assets/about/mobile/bg-pattern-hero-about-mobile.svg')",
+        "about-hero-tablet":
+          "url('/assets/about/desktop/bg-pattern-hero-about-desktop.svg')",
       },
       letterSpacing: {
         huge: "0.25em",

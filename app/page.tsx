@@ -50,6 +50,7 @@ export default function Home() {
             className="invisible absolute -bottom-72 -left-40 -z-50 lg:visible lg:max-w-4xl  xl:max-w-none"
           />
         </div>
+
         {/* Links to designs */}
         <div className="container mb-28 grid gap-y-28 md:mb-16 lg:mb-40 lg:gap-y-40">
           <div className="grid gap-y-6 lg:grid-cols-2 lg:gap-x-8">
