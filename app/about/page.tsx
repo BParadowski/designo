@@ -37,7 +37,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* Layout div */}
+      {/* Layout spacing div */}
       <div className="grid gap-28 lg:gap-40">
         {/* World class talent */}
         <div className="sm:container">
@@ -71,7 +71,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="container relative">
           <LocationLinks />
           <Image
             alt=""
@@ -83,8 +83,8 @@ export default function About() {
         {/* The real deal */}
         <div className="sm:container">
           <div
-            className="bg-primary-100 bg-three-circles lg:grid-col-[fit-content_1fr] grid overflow-hidden bg-[position:left_bottom_-2rem]
-                            bg-no-repeat sm:rounded-xl sm:bg-[position:left_4rem_bottom_3rem] lg:grid-flow-col lg:bg-bottom"
+            className="bg-primary-100 bg-three-circles lg:grid-col-[fit-content_1fr] lg:bg-two-circles grid overflow-hidden
+                            bg-[position:left_bottom_-2rem] bg-no-repeat sm:rounded-xl sm:bg-[position:left_4rem_bottom_3rem] lg:grid-flow-col lg:bg-left-bottom"
           >
             <Picture
               base="/assets/about/mobile/image-real-deal.jpg"

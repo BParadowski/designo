@@ -23,6 +23,11 @@ npm install -D prettier prettier-plugin-tailwindcss
 3. Percentage values in `background-position-x/y` property are based on relation of background size to the element size. For instance if the background image is _larger_ than the element, positive values move the image to the _left_. If the background image is _smaller_ however, positive values move it _right_... Due to this behavior they are a bad choice in reponsive designes. **Best stick to flat numbers for individual container sizes**. In this case they simply mean offset from left or top.
 
 4. Using `isolation: isolate` on components might be a good idea to avoid z-index problems.
+5. Good design-system idea is to decide wheather components
+   use the "container" class or not and stick to that decision if possible.
+6. `background-position` has a nice 3/4 value syntax where first you define base position and then offset from it, for instance:\
+   `background-position: bottom 2rem left -3rem`\
+   will position the bg image 2rems up from the bottom border and 3rems left from the left border.
 
 ### **Unwieldy images**
 
