@@ -1,11 +1,11 @@
 import { ComponentProps } from "react";
 
 interface PictureProps {
-  base: any;
-  sm?: any;
-  md?: any;
-  lg?: any;
-  xl?: any;
+  base: string;
+  sm?: string;
+  md?: string;
+  lg?: string;
+  xl?: string;
   className?: ComponentProps<"picture">["className"];
 }
 

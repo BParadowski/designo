@@ -52,6 +52,8 @@ const config: Config = {
           "url('/assets/about/mobile/bg-pattern-hero-about-mobile.svg')",
         "about-hero-tablet":
           "url('/assets/about/desktop/bg-pattern-hero-about-desktop.svg')",
+        "three-circles":
+          "url('/assets/shared/desktop/bg-pattern-three-circles.svg')",
       },
       letterSpacing: {
         huge: "0.25em",
