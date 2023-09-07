@@ -25,19 +25,17 @@ const MobileNav = () => {
         createPortal(
           <div className="fixed bottom-0 left-0 right-0 top-[--header-height] bg-neutral-800 bg-opacity-50 md:hidden">
             <div className="bg-black">
-              <div className="container">
-                <nav className=" flex flex-col gap-8 py-12 text-end text-2xl uppercase tracking-widest text-white">
-                  <Link href="/about" onClick={() => setNavOpen(false)}>
-                    our company
-                  </Link>
-                  <Link href="/locations" onClick={() => setNavOpen(false)}>
-                    locations
-                  </Link>
-                  <Link href="/contact" onClick={() => setNavOpen(false)}>
-                    contact
-                  </Link>
-                </nav>
-              </div>
+              <nav className="container flex flex-col gap-8 py-12 text-end text-2xl uppercase tracking-widest text-white">
+                <Link href="/about" onClick={() => setNavOpen(false)}>
+                  our company
+                </Link>
+                <Link href="/locations" onClick={() => setNavOpen(false)}>
+                  locations
+                </Link>
+                <Link href="/contact" onClick={() => setNavOpen(false)}>
+                  contact
+                </Link>
+              </nav>
             </div>
           </div>,
           document.body,

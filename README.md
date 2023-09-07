@@ -33,7 +33,7 @@ npm install -D prettier prettier-plugin-tailwindcss
 
 8. Adding `overflow-hidden` to `<main>` of every page solves the problem of overflow with strange decorations positioned `absolute` which "leave" the page.
 
-9. The difference between `overflow-hidden` and `overflow-clip` is that the latter prohibits all scrolling including programmatic scrolling.
+9. The difference between `overflow-hidden` and `overflow-clip` is that the latter prohibits all scrolling including programmatic scrolling. Also: **You can clip in one direction while keeping your content visible in another direction**, which you can not do with `overflow-hidden`. [This article](https://kilianvalkhof.com/2022/css-html/do-you-know-about-overflow-clip/) provides more details.
 
 ### **Unwieldy images**
 

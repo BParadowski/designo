@@ -5,7 +5,7 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-20 max-w-full bg-white md:static">
+    <header className="sticky top-0 z-50 max-w-full bg-white md:static">
       <div className="container">
         <div className="flex h-[--header-height] items-center ">
           <Link href="/">
@@ -28,6 +28,7 @@ const Header = () => {
               contact
             </Link>
           </nav>
+
           <MobileNav />
         </div>
       </div>

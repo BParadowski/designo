@@ -4,7 +4,7 @@ import { Jost } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-const jost = Jost({ subsets: ["latin"], weight: ["400", "500"] });
+const jost = Jost({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export const metadata: Metadata = {
   title: "Designo",
