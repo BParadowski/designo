@@ -1,13 +1,28 @@
-import Link from "next/link";
-import { ComponentProps, PropsWithChildren } from "react";
+import Link, { LinkProps } from "next/link";
+import {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  PropsWithChildren,
+} from "react";
 
-interface StyledButtonProps {
+interface BaseProps {
   theme: "primary" | "neutral";
-  buttonProps?: Exclude<
-    ComponentProps<"button">,
-    ComponentProps<"button">["className"]
-  >;
 }
+
+interface StyledButtonProps
+  extends BaseProps,
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className"> {
+  as?: "button";
+}
+
+interface StyledLinkProps
+  extends BaseProps,
+    LinkProps,
+    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href" | "className"> {
+  as: "Link";
+}
+
+type LinkOrButtonProps = StyledButtonProps | StyledLinkProps;
 
 const themes = {
   primary:
@@ -20,12 +35,22 @@ const Button = ({
   theme,
   children,
   ...props
-}: PropsWithChildren<StyledButtonProps>) => {
-  return (
-    <button className={themes[theme]} {...props}>
-      {children}
-    </button>
-  );
+}: PropsWithChildren<LinkOrButtonProps>) => {
+  if (props.as === "Link") {
+    const { as, ...rest } = props;
+    return (
+      <Link className={themes[theme]} {...rest}>
+        {children}
+      </Link>
+    );
+  } else {
+    const { as, ...rest } = props;
+    return (
+      <button className={themes[theme]} {...rest}>
+        {children}
+      </button>
+    );
+  }
 };
 
 export default Button;

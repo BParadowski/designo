@@ -4,7 +4,6 @@ import ImageLink from "./components/shared/ImageLink";
 import Image from "next/image";
 import heroImage from "/public/assets/home/desktop/image-hero-phone.png";
 import Button from "./components/shared/Button";
-import Link from "next/link";
 import leaf from "/public/assets/shared/desktop/bg-pattern-leaf.svg";
 
 export default function Home() {
@@ -30,9 +29,11 @@ export default function Home() {
                   creating fully responsive websites, app design, and engaging
                   brand experiences. Find out more about our services.
                 </p>
-                <Link className="z-10" href="/about">
-                  <Button theme="neutral">learn more</Button>
-                </Link>
+                <div className="z-10">
+                  <Button theme="neutral" as="Link" href="/about">
+                    learn more
+                  </Button>
+                </div>
               </div>
               <div className="z-0 w-fit">
                 <Image

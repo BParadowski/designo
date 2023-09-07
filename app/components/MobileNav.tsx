@@ -27,9 +27,15 @@ const MobileNav = () => {
             <div className="bg-black">
               <div className="container">
                 <nav className=" flex flex-col gap-8 py-12 text-end text-2xl uppercase tracking-widest text-white">
-                  <Link href="/about">our company</Link>
-                  <Link href="/locations">locations</Link>
-                  <Link href="/contact">contact</Link>
+                  <Link href="/about" onClick={() => setNavOpen(false)}>
+                    our company
+                  </Link>
+                  <Link href="/locations" onClick={() => setNavOpen(false)}>
+                    locations
+                  </Link>
+                  <Link href="/contact" onClick={() => setNavOpen(false)}>
+                    contact
+                  </Link>
                 </nav>
               </div>
             </div>

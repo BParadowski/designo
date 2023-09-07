@@ -16,9 +16,11 @@ const LocationLinks = () => {
         <p className="mt-12 text-xl font-medium uppercase tracking-huge">
           Canada
         </p>
-        <Link href="/locations" className="mt-8">
-          <Button theme="primary">see location</Button>
-        </Link>
+        <div className="mt-8">
+          <Button theme="primary" as="Link" href="/locations">
+            see location
+          </Button>
+        </div>
       </div>
 
       <div className="grid justify-items-center ">
@@ -29,9 +31,11 @@ const LocationLinks = () => {
         <p className="mt-12 text-xl font-medium uppercase tracking-huge">
           Australia
         </p>
-        <Link href="/locations" className="mt-8">
-          <Button theme="primary">see location</Button>
-        </Link>
+        <div className="mt-8">
+          <Button theme="primary" as="Link" href="/locations">
+            see location
+          </Button>
+        </div>
       </div>
 
       <div className="grid justify-items-center">
@@ -42,9 +46,11 @@ const LocationLinks = () => {
         <p className="mt-12 text-xl font-medium uppercase tracking-huge">
           United Kingdom
         </p>
-        <Link href="/locations" className="mt-8">
-          <Button theme="primary">see location</Button>
-        </Link>
+        <div className="mt-8">
+          <Button theme="primary" as="Link" href="/locations">
+            see location
+          </Button>
+        </div>
       </div>
     </div>
   );

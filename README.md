@@ -117,6 +117,8 @@ type AllLinksData = {
 };
 ```
 
+8. Making a polymorhipc button component is not exactly straight-forward in typescript. [This article](https://dev.to/frehner/polymorphic-button-component-in-typescript-c28) did help though.
+
 ## VsCode
 
 1. `ctrl + d` lets you select the next occurance of a selected string.
