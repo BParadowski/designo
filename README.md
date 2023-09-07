@@ -31,6 +31,10 @@ npm install -D prettier prettier-plugin-tailwindcss
 
 7. `::before` and `::after` pseudolelemnts are first or last child of an element. **They won't work on elements without children!**
 
+8. Adding `overflow-hidden` to `<main>` of every page solves the problem of overflow with strange decorations positioned `absolute` which "leave" the page.
+
+9. The difference between `overflow-hidden` and `overflow-clip` is that the latter prohibits all scrolling including programmatic scrolling.
+
 ### **Unwieldy images**
 
 To "cut off" a part of an image **and influence the box model** you can use negative margin.

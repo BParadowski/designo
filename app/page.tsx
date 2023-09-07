@@ -9,7 +9,7 @@ import leaf from "/public/assets/shared/desktop/bg-pattern-leaf.svg";
 export default function Home() {
   return (
     <>
-      <main className="isolate">
+      <main className="isolate overflow-hidden">
         {/* Hero */}
         <div className="relative mb-32 sm:container lg:mb-40">
           <div
@@ -19,7 +19,7 @@ export default function Home() {
             <div className="grid justify-items-center px-6 pt-20 sm:px-0 lg:grid-flow-col lg:pt-0 xl:grid-cols-[1fr_auto]">
               <div
                 className="grid justify-items-center gap-6 text-center text-white lg:place-content-center 
-                lg:justify-items-start lg:pl-16 lg:text-start xl:gap-10 "
+                lg:justify-items-start lg:pl-16 lg:text-start xl:gap-10 xl:pl-24"
               >
                 <h1 className="max-w-text-heading text-4xl font-medium md:text-5xl lg:text-4xl xl:text-5xl">
                   Award-winning custom designs and digital branding solutions
