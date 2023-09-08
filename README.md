@@ -14,6 +14,8 @@ npm install -D prettier prettier-plugin-tailwindcss
 
 4. tailwind.config.ts allows for customizing tailwind base colors and adding values. Good thing while setting up a project is changing the "container" class to suit your needs.
 
+5. To add a favicon in Next13 you can simply place a file called _favicon.ico_ in the top level of app directory.
+
 ## Css
 
 1. Some svgs use "stroke" attribute instead of "fill".
