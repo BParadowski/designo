@@ -7,10 +7,10 @@ export default function Contact() {
   return (
     <main className="overflow-hidden">
       {/* Contact form card */}
-      <div className="mb-28 sm:container lg:mb-40">
+      <div className="mb-28 sm:container xl:mb-40">
         <div
-          className="bg-contact-pattern-mobile sm:bg-contact-pattern-tablet gap-12 bg-primary-700 bg-top bg-no-repeat py-16
-                        text-white sm:gap-8 sm:rounded-2xl sm:bg-[position:left_-8rem_top_-6rem] lg:bg-left-bottom lg:py-14"
+          className="gap-12 bg-primary-700 bg-contact-pattern-mobile bg-top bg-no-repeat py-16 text-white
+                        sm:gap-8 sm:rounded-2xl sm:bg-contact-pattern-tablet sm:bg-[position:left_-8rem_top_-6rem] lg:bg-left-bottom lg:py-14"
         >
           <div className="container grid gap-10 md:px-14 lg:grid-flow-col lg:grid-cols-[4fr_3fr] lg:px-20 xl:px-24">
             {/* Heading and description */}
@@ -29,7 +29,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="container relative mb-28 lg:mb-40">
+      <div className="container relative mb-28 xl:mb-40">
         <LocationLinks />
         <Image
           alt=""

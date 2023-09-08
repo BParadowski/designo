@@ -15,7 +15,7 @@ interface LocationCardProps {
 export default function Locations() {
   return (
     <main>
-      <div className="mb-32 grid gap-8 xl:mb-40">
+      <div className="mb-32 grid gap-8 sm:gap-24 md:gap-32 lg:gap-8 xl:mb-40">
         <LocationCard
           country="Canada"
           officeName="Designo Central Office"
@@ -54,7 +54,7 @@ export default function Locations() {
           country="United Kingdom"
           officeName="Designo UK Office"
           addressLineOne="13  Colorado Way"
-          addressLineTwo="Rhyd-y-fro, SA8 9GA"
+          addressLineTwo="Rhyd-y-fro SA8 9GA"
           phone="078 3115 1400"
           email="contact@designo.uk"
           map={

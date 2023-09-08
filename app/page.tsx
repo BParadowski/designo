@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <main className="isolate overflow-hidden">
         {/* Hero */}
-        <div className="relative mb-32 sm:container lg:mb-40">
+        <div className="relative mb-32 sm:container xl:mb-40">
           <div
             className="overflow-hidden bg-primary-700 bg-hero-pattern 
                        bg-left bg-no-repeat sm:rounded-2xl sm:bg-[position:6rem] md:bg-[position:10rem] lg:bg-right-top"
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
 
         {/* Links to designs */}
-        <div className="container mb-28 grid gap-y-28 md:mb-16 lg:mb-40 lg:gap-y-40">
+        <div className="container mb-28 grid gap-y-28 md:mb-16 lg:mb-24 xl:mb-40 xl:gap-y-40">
           <div className="grid gap-y-6 lg:grid-cols-2 lg:gap-x-8">
             <ImageLink
               destination="web-design"

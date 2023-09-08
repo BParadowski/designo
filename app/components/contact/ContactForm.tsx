@@ -46,7 +46,7 @@ export default function ContactForm() {
         >
           <input
             type="text"
-            className="bg-transparent w-full border-none px-4 py-3 font-medium outline-none placeholder:text-white
+            className="w-full border-none bg-transparent px-4 py-3 font-medium outline-none placeholder:text-white
                            placeholder:opacity-50 focus-within:placeholder:opacity-80 hover:placeholder:opacity-80"
             placeholder="Name*"
             {...register("name")}
@@ -60,7 +60,7 @@ export default function ContactForm() {
         >
           <input
             type="text"
-            className="bg-transparent w-full border-none px-4 py-3 font-medium outline-none placeholder:text-white
+            className="w-full border-none bg-transparent px-4 py-3 font-medium outline-none placeholder:text-white
                            placeholder:opacity-50 focus-within:placeholder:opacity-80 hover:placeholder:opacity-80"
             placeholder="Email Address*"
             {...register("email")}
@@ -74,7 +74,7 @@ export default function ContactForm() {
         >
           <input
             type="text"
-            className="bg-transparent w-full border-none px-4 py-3 font-medium outline-none placeholder:text-white
+            className="w-full border-none bg-transparent px-4 py-3 font-medium outline-none placeholder:text-white
                            placeholder:opacity-50 focus-within:placeholder:opacity-80 hover:placeholder:opacity-80"
             placeholder="Phone"
             {...register("phone")}
@@ -87,7 +87,7 @@ export default function ContactForm() {
                                      focus-within:after:shadow-[0_0_0_0.0625rem]"
         >
           <textarea
-            className="bg-transparent h-28 w-full resize-none border-none px-4 py-3 font-medium outline-none
+            className="h-28 w-full resize-none border-none bg-transparent px-4 py-3 font-medium outline-none
                            placeholder:text-white placeholder:opacity-50 focus-within:placeholder:opacity-80 hover:placeholder:opacity-80"
             placeholder="Your message*"
             {...register("message")}

@@ -28,7 +28,7 @@ export default function Designs({ params }: { params: { slug: Slug } }) {
           {/* Introduction card */}
           <div className="relative md:container ">
             <div
-              className={`bg-design-pages-intro-mobile sm:bg-design-pages-intro-tablet bg-primary-700 bg-right-top bg-no-repeat sm:bg-right md:rounded-2xl ${
+              className={`bg-primary-700 bg-design-pages-intro-mobile bg-right-top bg-no-repeat sm:bg-design-pages-intro-tablet sm:bg-right md:rounded-2xl ${
                 bgImageStyling[params.slug]
               }`}
             >
@@ -51,7 +51,7 @@ export default function Designs({ params }: { params: { slug: Slug } }) {
             {data.cards.map((card) => (
               <div
                 key={card.title}
-                className="bg-primary-100 group overflow-hidden rounded-2xl transition-colors hover:cursor-pointer hover:bg-primary-700
+                className="group overflow-hidden rounded-2xl bg-primary-100 transition-colors hover:cursor-pointer hover:bg-primary-700
                             sm:grid sm:grid-flow-col sm:grid-cols-2 lg:block"
               >
                 <Image alt="preview of the design" src={card.image} />
@@ -66,7 +66,7 @@ export default function Designs({ params }: { params: { slug: Slug } }) {
           </div>
 
           {/* Links to other designs */}
-          <div className="container grid gap-6 lg:grid-flow-col lg:gap-8">
+          <div className="container grid gap-6 lg:grid-flow-col lg:grid-cols-2 lg:gap-8">
             {slugs.map(
               (slug) =>
                 slug !== params.slug && (

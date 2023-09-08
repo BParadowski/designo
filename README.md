@@ -29,7 +29,7 @@ npm install -D prettier prettier-plugin-tailwindcss
    `background-position: bottom 2rem left -3rem`\
    will position the bg image 2rems up from the bottom border and 3rems left from the left border.
 
-7. `::before` and `::after` pseudolelemnts are first or last child of an element. **They won't work on elements without children!**
+7. `::before` and `::after` pseudo-elements are first or last child of an element. **They won't work on elements without children!**
 
 8. Adding `overflow-hidden` to `<main>` of every page solves the problem of overflow with strange decorations positioned `absolute` which "leave" the page.
 
