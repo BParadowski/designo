@@ -8,10 +8,10 @@ export default function About() {
   return (
     <main className="overflow-hidden">
       {/* Hero */}
-      <div className="sm:container sm:mb-28 lg:mb-40">
+      <section className="sm:container sm:mb-28 lg:mb-40">
         <div
-          className="bg-about-hero-mobile sm:bg-about-hero-tablet grid overflow-hidden bg-primary-700 bg-right bg-no-repeat
-                sm:rounded-2xl sm:bg-[position:-7rem_-6rem] lg:grid-flow-col lg:grid-cols-[1fr-fit-content] xl:bg-left-bottom"
+          className="grid overflow-hidden bg-primary-700 bg-about-hero-mobile bg-right bg-no-repeat sm:rounded-2xl
+                sm:bg-about-hero-tablet sm:bg-[position:-7rem_-6rem] lg:grid-flow-col lg:grid-cols-[1fr-fit-content] xl:bg-left-bottom"
         >
           <Picture
             base="/assets/about/mobile/image-about-hero.jpg"
@@ -35,14 +35,14 @@ export default function About() {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Layout spacing div */}
       <div className="grid gap-28 lg:gap-40">
         {/* World class talent */}
-        <div className="sm:container">
+        <section className="sm:container">
           <div
-            className="bg-primary-100 bg-three-circles lg:grid-col-[fit-content_1fr] grid overflow-hidden bg-[position:left_bottom_-2rem]
+            className="lg:grid-col-[fit-content_1fr] grid overflow-hidden bg-primary-100 bg-three-circles bg-[position:left_bottom_-2rem]
                             bg-no-repeat sm:rounded-xl sm:bg-[position:left_4rem_bottom_3rem] lg:grid-flow-col lg:bg-bottom"
           >
             <Picture
@@ -51,9 +51,9 @@ export default function About() {
               lg="/assets/about/desktop/image-world-class-talent.jpg"
             />
             <div className="container grid place-content-center gap-6 py-20 text-center sm:py-12 lg:text-start xl:px-24">
-              <h2 className=" text-3xl font-medium text-primary-700 md:text-4xl">
+              <h1 className=" text-3xl font-medium text-primary-700 md:text-4xl">
                 World-class talent
-              </h2>
+              </h1>
               <p className="lg:max-w-text-narrow">
                 We are a crew of strategists, problem-solvers, and
                 technologists. Every design is thoughtfully crafted from concept
@@ -69,22 +69,23 @@ export default function About() {
               </p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="container relative">
+        <section className="container relative">
+          <h1 className="sr-only">Where to find us</h1>
           <LocationLinks />
           <Image
             alt=""
             src={leaf}
             className="invisible absolute -right-80 top-44 -z-50 lg:visible lg:max-w-4xl  xl:max-w-none"
           />
-        </div>
+        </section>
 
         {/* The real deal */}
-        <div className="sm:container">
+        <section className="sm:container">
           <div
-            className="bg-primary-100 bg-three-circles lg:grid-col-[fit-content_1fr] lg:bg-two-circles grid overflow-hidden
-            bg-[position:left_bottom_-2rem] bg-no-repeat sm:rounded-xl sm:bg-[position:left_4rem_bottom_3rem] lg:grid-flow-col lg:bg-left-bottom"
+            className="lg:grid-col-[fit-content_1fr] grid overflow-hidden bg-primary-100 bg-three-circles bg-[position:left_bottom_-2rem]
+            bg-no-repeat sm:rounded-xl sm:bg-[position:left_4rem_bottom_3rem] lg:grid-flow-col lg:bg-two-circles lg:bg-left-bottom"
           >
             <Picture
               base="/assets/about/mobile/image-real-deal.jpg"
@@ -93,9 +94,9 @@ export default function About() {
               className="lg:col-end-3"
             />
             <div className="container grid place-content-center gap-6 py-20 text-center sm:py-12 lg:text-start xl:px-24">
-              <h2 className=" text-3xl font-medium text-primary-700 md:text-4xl">
+              <h1 className=" text-3xl font-medium text-primary-700 md:text-4xl">
                 The real deal
-              </h2>
+              </h1>
               <p className="lg:max-w-text-narrow">
                 As strategic partners in our clients’ businesses, we are ready
                 to take on any challenge as our own. Solving real problems
@@ -111,7 +112,7 @@ export default function About() {
               </p>
             </div>
           </div>
-        </div>
+        </section>
 
         <CtaCard />
       </div>

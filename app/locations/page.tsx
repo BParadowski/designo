@@ -83,7 +83,7 @@ const LocationCard = ({
   map,
 }: LocationCardProps) => {
   return (
-    <div
+    <section
       className="group sm:container"
       id={country.toLowerCase().replace(/\s/gi, "-")}
     >
@@ -120,6 +120,6 @@ const LocationCard = ({
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

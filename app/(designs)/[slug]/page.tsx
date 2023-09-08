@@ -26,7 +26,7 @@ export default function Designs({ params }: { params: { slug: Slug } }) {
         {/* Layout spacing div */}
         <div className="grid gap-24 sm:gap-32 xl:gap-40">
           {/* Introduction card */}
-          <div className="relative md:container ">
+          <section className="relative md:container ">
             <div
               className={`bg-primary-700 bg-design-pages-intro-mobile bg-right-top bg-no-repeat sm:bg-design-pages-intro-tablet sm:bg-right md:rounded-2xl ${
                 bgImageStyling[params.slug]
@@ -44,10 +44,11 @@ export default function Designs({ params }: { params: { slug: Slug } }) {
               src={leaf}
               className="invisible absolute -left-20 -z-50 lg:visible lg:top-32 lg:max-w-4xl xl:top-28  xl:max-w-none"
             />
-          </div>
+          </section>
 
           {/* Project cards */}
-          <div className="container grid gap-y-10 md:gap-y-8 lg:grid-cols-3 lg:gap-x-8">
+          <section className="container grid gap-y-10 md:gap-y-8 lg:grid-cols-3 lg:gap-x-8">
+            <h1 className="sr-only">Our projects</h1>
             {data.cards.map((card) => (
               <div
                 key={card.title}
@@ -63,17 +64,18 @@ export default function Designs({ params }: { params: { slug: Slug } }) {
                 </div>
               </div>
             ))}
-          </div>
+          </section>
 
           {/* Links to other designs */}
-          <div className="container grid gap-6 lg:grid-flow-col lg:grid-cols-2 lg:gap-8">
+          <section className="container grid gap-6 lg:grid-flow-col lg:grid-cols-2 lg:gap-8">
+            <h1 className="sr-only">Other designs</h1>
             {slugs.map(
               (slug) =>
                 slug !== params.slug && (
                   <ImageLink destination={slug} key={slug} />
                 ),
             )}
-          </div>
+          </section>
 
           <CtaCard />
         </div>

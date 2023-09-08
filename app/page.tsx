@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <main className="isolate overflow-hidden">
         {/* Hero */}
-        <div className="relative mb-32 sm:container xl:mb-40">
+        <section className="relative mb-32 sm:container xl:mb-40">
           <div
             className="overflow-hidden bg-primary-700 bg-hero-pattern 
                        bg-left bg-no-repeat sm:rounded-2xl sm:bg-[position:6rem] md:bg-[position:10rem] lg:bg-right-top"
@@ -51,10 +51,11 @@ export default function Home() {
             src={leaf}
             className="invisible absolute -bottom-72 -left-40 -z-50 lg:visible lg:max-w-4xl  xl:max-w-none"
           />
-        </div>
+        </section>
 
         {/* Links to designs */}
-        <div className="container mb-28 grid gap-y-28 md:mb-16 lg:mb-24 xl:mb-40 xl:gap-y-40">
+        <section className="container mb-28 grid gap-y-28 md:mb-16 lg:mb-24 xl:mb-40 xl:gap-y-40">
+          <h2 className="sr-only">Our designs</h2>
           <div className="grid gap-y-6 lg:grid-cols-2 lg:gap-x-8">
             <ImageLink
               destination="web-design"
@@ -74,7 +75,7 @@ export default function Home() {
               className="invisible absolute -right-40 top-32 -z-50 rotate-180 lg:visible lg:max-w-4xl xl:max-w-none"
             />
           </div>
-        </div>
+        </section>
 
         <CtaCard />
       </main>
