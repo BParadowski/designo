@@ -5,6 +5,10 @@ import leaf from "/public/assets/shared/desktop/bg-pattern-leaf.svg";
 import Image from "next/image";
 import ImageLink from "@/app/components/shared/ImageLink";
 
+export const dynamicParams = false;
+//  Will throw 404 when slug not returned by generateStaticParams(),
+// otherwise it would attempt to dynamically generate the page.
+
 export function generateStaticParams() {
   return slugs.map((slug) => {
     return { slug };
