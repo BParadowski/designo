@@ -29,7 +29,7 @@ export default function Home() {
                   creating fully responsive websites, app design, and engaging
                   brand experiences. Find out more about our services.
                 </p>
-                <div className="z-10">
+                <div className="z-10 lg:mt-4">
                   <Button theme="neutral" as="Link" href="/about">
                     learn more
                   </Button>
@@ -37,7 +37,8 @@ export default function Home() {
               </div>
               <div className="z-0 w-fit">
                 <Image
-                  className="-mb-[48.67%] -mt-[8%] lg:-mb-[25%]"
+                  // Cropping lower part of the image and roughly aligning it with the heading.
+                  className="-mb-[48.67%] -mt-[8%] lg:-mb-[25%] lg:pt-7 xl:-mt-[4%] xl:pt-12"
                   src={heroImage}
                   priority
                   alt="A picture of a phone showing a website of our design"
@@ -74,9 +75,9 @@ export default function Home() {
             />
           </div>
         </div>
-      </main>
 
-      <CtaCard />
+        <CtaCard />
+      </main>
     </>
   );
 }
