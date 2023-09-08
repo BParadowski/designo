@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid items-center justify-items-center gap-y-8 md:grid-cols-2 md:justify-items-start">
           <Image src={logo} alt="designo logo" className="max-h-7 w-auto" />
           <div className="h-[0.0625rem] w-full bg-white bg-opacity-10 md:order-3 md:col-span-2 "></div>
-          <nav className="flex flex-col gap-8 text-center text-sm uppercase tracking-widest text-white md:flex-row md:justify-self-end ">
+          <div className="flex flex-col gap-8 text-center text-sm uppercase tracking-widest text-white md:flex-row md:justify-self-end ">
             <Link className="underline-offset-2 hover:underline" href="/about">
               our company
             </Link>
@@ -30,7 +30,7 @@ const Footer = () => {
             >
               contact
             </Link>
-          </nav>
+          </div>
         </div>
 
         <div className="mt-10 grid justify-items-center gap-y-10 text-center md:mt-8  md:grid-flow-col md:justify-items-start md:text-start">
