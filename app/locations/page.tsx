@@ -32,6 +32,7 @@ export default function Locations() {
             />
           }
         />
+
         <LocationCard
           country="Australia"
           officeName="Designo AU Office"
@@ -48,6 +49,7 @@ export default function Locations() {
             />
           }
         />
+
         <LocationCard
           country="United Kingdom"
           officeName="Designo UK Office"
@@ -81,7 +83,10 @@ const LocationCard = ({
   map,
 }: LocationCardProps) => {
   return (
-    <div className="group sm:container">
+    <div
+      className="group sm:container"
+      id={country.toLowerCase().replace(/\s/gi, "-")}
+    >
       <div
         className="grid bg-primary-100 sm:gap-8 sm:bg-transparent lg:grid-cols-[2fr_1fr] lg:group-even:grid-cols-[1fr_2fr]
       xl:grid-cols-[1fr_auto] xl:group-even:grid-cols-[auto_1fr]"

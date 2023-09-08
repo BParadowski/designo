@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${jost.className} `}>
-      <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-white leading-relaxed text-neutral-800">
+    <html lang="en" className={jost.className}>
+      <body className="grid min-h-screen grid-rows-[auto_1fr_auto] scroll-smooth bg-white leading-relaxed text-neutral-800">
         <Header />
         {children}
         <Footer />

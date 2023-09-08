@@ -17,7 +17,7 @@ const LocationLinks = () => {
           Canada
         </p>
         <div className="mt-8">
-          <Button theme="primary" as="Link" href="/locations">
+          <Button theme="primary" as="Link" href="/locations#canada">
             see location
           </Button>
         </div>
@@ -32,7 +32,7 @@ const LocationLinks = () => {
           Australia
         </p>
         <div className="mt-8">
-          <Button theme="primary" as="Link" href="/locations">
+          <Button theme="primary" as="Link" href="/locations#australia">
             see location
           </Button>
         </div>
@@ -47,7 +47,7 @@ const LocationLinks = () => {
           United Kingdom
         </p>
         <div className="mt-8">
-          <Button theme="primary" as="Link" href="/locations">
+          <Button theme="primary" as="Link" href="/locations#united-kingdom">
             see location
           </Button>
         </div>
