@@ -11,22 +11,33 @@ const Header = () => {
           <Link href="/">
             <Image src={logo} alt="designo logo" className="max-h-7 w-auto" />
           </Link>
-          <nav className="ml-auto hidden gap-8 text-sm uppercase tracking-widest text-neutral-800 md:flex">
-            <Link className="underline-offset-2 hover:underline" href="/about">
-              our company
-            </Link>
-            <Link
-              className="underline-offset-2 hover:underline"
-              href="/locations"
-            >
-              locations
-            </Link>
-            <Link
-              className="underline-offset-2 hover:underline"
-              href="/contact"
-            >
-              contact
-            </Link>
+          <nav className="ml-auto hidden md:block">
+            <ul className="flex gap-8 text-sm uppercase tracking-widest text-neutral-800">
+              <li>
+                <Link
+                  className="underline-offset-2 hover:underline"
+                  href="/about"
+                >
+                  our company
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="underline-offset-2 hover:underline"
+                  href="/locations"
+                >
+                  locations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="underline-offset-2 hover:underline"
+                  href="/contact"
+                >
+                  contact
+                </Link>
+              </li>
+            </ul>
           </nav>
 
           <MobileNav />
