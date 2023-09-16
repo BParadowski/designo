@@ -7,6 +7,13 @@
 ```
 npm install -D prettier prettier-plugin-tailwindcss
 ```
+and add prettier.config.js: 
+```
+// prettier.config.js
+module.exports = {
+  plugins: ['prettier-plugin-tailwindcss'],
+}
+```
 
 2. Use next/fonts to self-host a google font in layout.tsx.
 
