@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "npx playwright test"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.1",
@@ -26,6 +27,7 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.44.0",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.3"
   }
