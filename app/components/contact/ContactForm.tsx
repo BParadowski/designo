@@ -8,10 +8,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 
 const formSchema = z.object({
-  name: z.string().nonempty("Can’t be empty"),
-  email: z.string().nonempty("Can’t be empty").email("Invalid format"),
+  name: z.string().min(1, "Can’t be empty"),
+  email: z.string().min(1, "Can’t be empty").email("Invalid format"),
   phone: z.string(),
-  message: z.string().nonempty("Can’t be empty"),
+  message: z.string().min(1, "Can’t be empty"),
 });
 
 export default function ContactForm() {
@@ -49,6 +49,7 @@ export default function ContactForm() {
             className="w-full border-none bg-transparent px-4 py-3 font-medium outline-none placeholder:text-white
                            placeholder:opacity-50 focus-within:placeholder:opacity-80 hover:placeholder:opacity-80"
             placeholder="Name*"
+            aria-invalid={errors.name ? "true" : "false"}
             {...register("name")}
           />
           {errors.name && <ErrorMessage text={errors.name?.message ?? ""} />}
@@ -63,6 +64,7 @@ export default function ContactForm() {
             className="w-full border-none bg-transparent px-4 py-3 font-medium outline-none placeholder:text-white
                            placeholder:opacity-50 focus-within:placeholder:opacity-80 hover:placeholder:opacity-80"
             placeholder="Email Address*"
+            aria-invalid={errors.email ? "true" : "false"}
             {...register("email")}
           />
           {errors.email && <ErrorMessage text={errors.email?.message ?? ""} />}
@@ -77,6 +79,7 @@ export default function ContactForm() {
             className="w-full border-none bg-transparent px-4 py-3 font-medium outline-none placeholder:text-white
                            placeholder:opacity-50 focus-within:placeholder:opacity-80 hover:placeholder:opacity-80"
             placeholder="Phone"
+            aria-invalid={errors.phone ? "true" : "false"}
             {...register("phone")}
           />
           {errors.phone && <ErrorMessage text={errors.phone?.message ?? ""} />}
@@ -90,6 +93,7 @@ export default function ContactForm() {
             className="h-28 w-full resize-none border-none bg-transparent px-4 py-3 font-medium outline-none
                            placeholder:text-white placeholder:opacity-50 focus-within:placeholder:opacity-80 hover:placeholder:opacity-80"
             placeholder="Your message*"
+            aria-invalid={errors.message ? "true" : "false"}
             {...register("message")}
           />
           {errors.message && (
@@ -108,7 +112,10 @@ export default function ContactForm() {
 
 function ErrorMessage({ text }: { text: string }) {
   return (
-    <div className="absolute right-0 top-1/2 z-20 flex -translate-y-1/2 items-center gap-2">
+    <div
+      className="absolute right-0 top-1/2 z-20 flex -translate-y-1/2 items-center gap-2"
+      role="alert"
+    >
       <p>{text}</p>
       <Image src={iconError} alt="" />
     </div>
