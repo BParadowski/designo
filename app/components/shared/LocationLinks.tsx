@@ -1,8 +1,7 @@
 import Button from "./Button";
-import australia from "/public/assets/shared/desktop/illustration-australia.svg";
-import canada from "/public/assets/shared/desktop/illustration-canada.svg";
-import unitedKingdom from "/public/assets/shared/desktop/illustration-united-kingdom.svg";
-import Link from "next/link";
+import australia from "@/public/assets/shared/desktop/illustration-australia.svg";
+import canada from "@/public/assets/shared/desktop/illustration-canada.svg";
+import unitedKingdom from "@/public/assets/shared/desktop/illustration-united-kingdom.svg";
 import Image from "next/image";
 
 const LocationLinks = () => {

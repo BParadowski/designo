@@ -5,7 +5,7 @@ import SvgIconInstagram from "./svgs/IconInstagram";
 import SvgIconYoutube from "./svgs/IconYoutube";
 import SvgIconPinterest from "./svgs/IconPinterest";
 import Image from "next/image";
-import logo from "public/assets/shared/desktop/logo-light.png";
+import logo from "@/public/assets/shared/desktop/logo-light.png";
 
 const Footer = () => {
   return (

@@ -1,6 +1,6 @@
-import friendly from "public/assets/home/desktop/illustration-friendly.svg";
-import passionate from "public/assets/home/desktop/illustration-passionate.svg";
-import resourceful from "public/assets/home/desktop/illustration-resourceful.svg";
+import friendly from "@/public/assets/home/desktop/illustration-friendly.svg";
+import passionate from "@/public/assets/home/desktop/illustration-passionate.svg";
+import resourceful from "@/public/assets/home/desktop/illustration-resourceful.svg";
 import Image from "next/image";
 
 const DesignerQualities = () => {
