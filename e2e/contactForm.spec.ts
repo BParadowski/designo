@@ -44,4 +44,25 @@ test.describe("Contact form", () => {
 
     await expect(page.getByPlaceholder("Email Address*")).toBeFocused();
   });
+
+  test("Shows a confirmation modal after succesfully submitting", async ({
+    page,
+  }) => {
+    await page.getByPlaceholder("Name*").fill("John Doe");
+    await page.getByPlaceholder("Name*").press("Tab");
+    await page
+      .getByPlaceholder("Email Address*")
+      .fill("email@someprovider.com");
+    await page.getByPlaceholder("Email Address*").press("Tab");
+    await page.getByPlaceholder("Phone").fill("354 987 902");
+    await page.getByPlaceholder("Phone").press("Tab");
+    await page
+      .getByPlaceholder("Your message*")
+      .fill("I want to colaborate on...");
+    await page.getByPlaceholder("Your message*").press("Tab");
+    await page.getByRole("button", { name: "submit" }).press("Enter");
+
+    await expect(page.getByRole("alertdialog")).toBeVisible();
+    await expect(page.getByRole("button", { name: "Got it" })).toBeFocused();
+  });
 });
