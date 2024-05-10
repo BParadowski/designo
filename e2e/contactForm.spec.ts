@@ -1,10 +1,13 @@
 import { test, expect } from "@playwright/test";
 
+test.beforeEach(async ({ page }) => {
+  await page.goto("/contact");
+});
+
 test.describe("Contact form", () => {
   test("Shows a descriptive error message when email has invalid format", async ({
     page,
   }) => {
-    await page.goto("/contact");
     await page.getByPlaceholder(/email/i).fill("xyz@mo");
     await page.press("body", "Tab");
 
@@ -15,7 +18,6 @@ test.describe("Contact form", () => {
   });
 
   test("Shows an error when a required field is empty", async ({ page }) => {
-    await page.goto("/contact");
     await page.getByRole("button", { name: "submit" }).click();
 
     const errorMessageName = page.getByRole("alert").first();
@@ -33,7 +35,6 @@ test.describe("Contact form", () => {
   });
 
   test("Auto-focuses an invalid field", async ({ page }) => {
-    await page.goto("/contact");
     await page.getByPlaceholder("Name*").fill("John Doe");
     await page
       .getByPlaceholder("Your message*")

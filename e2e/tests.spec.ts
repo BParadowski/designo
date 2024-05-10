@@ -9,3 +9,12 @@ test.describe("Landing page", () => {
     expect(accessibilityScanResults.violations).toEqual([]);
   });
 });
+
+test.describe("Contact page", () => {
+  test("Does not raise accessibility concerns", async ({ page }) => {
+    await page.goto("/contact");
+    const accessibilityScanResults = await new AxeBuilder({ page }).analyze(); // 4
+
+    expect(accessibilityScanResults.violations).toEqual([]);
+  });
+});
