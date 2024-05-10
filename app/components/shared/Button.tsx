@@ -2,7 +2,8 @@ import Link, { LinkProps } from "next/link";
 import {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
-  PropsWithChildren,
+  ForwardedRef,
+  forwardRef,
 } from "react";
 
 interface BaseProps {
@@ -31,26 +32,33 @@ const themes = {
     "rounded-lg bg-white px-6 py-4 text-center font-medium uppercase tracking-widest text-black hover:bg-primary-300 hover:text-white",
 };
 
-const Button = ({
-  theme,
-  children,
-  ...props
-}: PropsWithChildren<LinkOrButtonProps>) => {
+const Button = forwardRef<
+  HTMLButtonElement | HTMLAnchorElement,
+  LinkOrButtonProps
+>(function Button(props, ref) {
   if (props.as === "Link") {
-    const { as, ...rest } = props;
+    const { as, theme, children, ...rest } = props;
     return (
-      <Link className={themes[theme]} {...rest}>
+      <Link
+        className={themes[theme]}
+        {...rest}
+        ref={ref as ForwardedRef<HTMLAnchorElement>}
+      >
         {children}
       </Link>
     );
   } else {
-    const { as, ...rest } = props;
+    const { as, theme, children, ...rest } = props;
     return (
-      <button className={themes[theme]} {...rest}>
+      <button
+        className={themes[theme]}
+        {...rest}
+        ref={ref as ForwardedRef<HTMLButtonElement>}
+      >
         {children}
       </button>
     );
   }
-};
+});
 
 export default Button;
