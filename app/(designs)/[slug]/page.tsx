@@ -56,7 +56,7 @@ export default function Designs({ params }: { params: { slug: Slug } }) {
             {data.cards.map((card) => (
               <div
                 key={card.title}
-                className="group overflow-hidden rounded-2xl bg-primary-100 transition-colors hover:cursor-pointer hover:bg-primary-700
+                className="group overflow-hidden rounded-2xl bg-primary-100 transition-colors hover:bg-primary-700
                             sm:grid sm:grid-flow-col sm:grid-cols-2 lg:block"
               >
                 <Image alt="preview of the design" src={card.image} />
