@@ -1,3 +1,4 @@
+import { cva, type VariantProps } from "class-variance-authority";
 import Link, { LinkProps } from "next/link";
 import {
   AnchorHTMLAttributes,
@@ -6,9 +7,21 @@ import {
   forwardRef,
 } from "react";
 
-interface BaseProps {
-  theme: "primary" | "neutral";
-}
+const buttonVariants = cva(
+  "rounded-lg px-6 py-4 text-center font-medium uppercase tracking-widest hover:bg-primary-300",
+  {
+    variants: {
+      theme: {
+        primary: "bg-primary-700 text-white ",
+        neutral: "bg-white text-black hover:text-white",
+      },
+    },
+  },
+);
+
+type ButtonVariantProps = VariantProps<typeof buttonVariants>;
+
+interface BaseProps extends Required<Pick<ButtonVariantProps, "theme">> {}
 
 interface StyledButtonProps
   extends BaseProps,
@@ -25,13 +38,6 @@ interface StyledLinkProps
 
 type LinkOrButtonProps = StyledButtonProps | StyledLinkProps;
 
-const themes = {
-  primary:
-    "rounded-lg bg-primary-700 px-6 py-4 text-center font-medium uppercase tracking-widest text-white hover:bg-primary-300",
-  neutral:
-    "rounded-lg bg-white px-6 py-4 text-center font-medium uppercase tracking-widest text-black hover:bg-primary-300 hover:text-white",
-};
-
 const Button = forwardRef<
   HTMLButtonElement | HTMLAnchorElement,
   LinkOrButtonProps
@@ -40,7 +46,7 @@ const Button = forwardRef<
     const { as, theme, children, ...rest } = props;
     return (
       <Link
-        className={themes[theme]}
+        className={buttonVariants({ theme })}
         {...rest}
         ref={ref as ForwardedRef<HTMLAnchorElement>}
       >
@@ -51,7 +57,7 @@ const Button = forwardRef<
     const { as, theme, children, ...rest } = props;
     return (
       <button
-        className={themes[theme]}
+        className={buttonVariants({ theme })}
         {...rest}
         ref={ref as ForwardedRef<HTMLButtonElement>}
       >

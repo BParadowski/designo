@@ -16,12 +16,12 @@ const formSchema = z.object({
   message: z.string().min(1, "Can’t be empty"),
 });
 
-export default function ContactForm() {
+const ContactForm = () => {
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(formSchema),
     mode: "onTouched",
@@ -34,22 +34,18 @@ export default function ContactForm() {
   });
 
   const [confirmationOpen, setConfirmationOpen] = useState(false);
+  const onSubmit = handleSubmit(async () => {
+    // Some api call
+    await Promise.resolve(
+      new Promise((resolve) => setTimeout(() => resolve(undefined), 1000)),
+    );
+    setConfirmationOpen(true);
+    reset();
+  });
 
   return (
     <>
-      <form
-        className="grid gap-10 sm:gap-6"
-        onSubmit={handleSubmit(async () => {
-          // Some api call
-          await Promise.resolve(
-            new Promise((resolve) =>
-              setTimeout(() => resolve(undefined), 1000),
-            ),
-          );
-          setConfirmationOpen(true);
-          reset();
-        })}
-      >
+      <form className="grid gap-10 sm:gap-6" onSubmit={onSubmit}>
         <fieldset className="grid gap-3">
           <div
             className="relative after:block after:h-[0.0625rem] after:bg-white after:outline-white
@@ -127,13 +123,15 @@ export default function ContactForm() {
       )}
     </>
   );
-}
+};
 
-function ErrorMessage({ text }: { text: string }) {
+export default ContactForm;
+
+const ErrorMessage = ({ text }: { text: string }) => {
   return (
     <div className="absolute right-0 top-1/2 z-20 flex -translate-y-1/2 items-center gap-2">
       <p role="alert">{text}</p>
       <Image src={iconError} alt="" />
     </div>
   );
-}
+};
