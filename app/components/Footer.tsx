@@ -12,7 +12,9 @@ const Footer = () => {
     <footer className=" bg-black py-16 md:py-20 xl:py-16">
       <div className="container ">
         <div className="grid items-center justify-items-center gap-y-8 md:grid-cols-2 md:justify-items-start">
-          <Image src={logo} alt="designo logo" className="max-h-7 w-auto" />
+          <Link href="/">
+            <Image src={logo} alt="designo logo" className="max-h-7 w-auto" />
+          </Link>
           <div className="h-[0.0625rem] w-full bg-white bg-opacity-10 md:order-3 md:col-span-2 "></div>
           <div className="flex flex-col gap-8 text-center text-sm uppercase tracking-widest text-white md:flex-row md:justify-self-end ">
             <Link className="underline-offset-2 hover:underline" href="/about">
