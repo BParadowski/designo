@@ -3,15 +3,15 @@ import australia from "@/public/assets/shared/desktop/illustration-australia.svg
 import canada from "@/public/assets/shared/desktop/illustration-canada.svg";
 import unitedKingdom from "@/public/assets/shared/desktop/illustration-united-kingdom.svg";
 import Image from "next/image";
+import CircleBg from "./CircleBg";
 
 const LocationLinks = () => {
   return (
     <div className="grid gap-y-20 text-center lg:grid-cols-3">
       <div className="grid justify-items-center">
-        <div className="relative">
-          <div className="absolute inset-x-0 inset-y-0 rotate-90 bg-small-circle" />
+        <CircleBg rotate="clockwise">
           <Image alt="" src={canada} />
-        </div>
+        </CircleBg>
         <p className="mt-12 text-xl font-medium uppercase tracking-huge">
           Canada
         </p>
@@ -23,10 +23,9 @@ const LocationLinks = () => {
       </div>
 
       <div className="grid justify-items-center ">
-        <div className="relative">
-          <div className="absolute inset-x-0 inset-y-0 bg-small-circle" />
+        <CircleBg>
           <Image alt="" src={australia} />
-        </div>
+        </CircleBg>
         <p className="mt-12 text-xl font-medium uppercase tracking-huge">
           Australia
         </p>
@@ -38,10 +37,9 @@ const LocationLinks = () => {
       </div>
 
       <div className="grid justify-items-center">
-        <div className="relative">
-          <div className="absolute inset-x-0 inset-y-0 -rotate-90 bg-small-circle" />
+        <CircleBg rotate="counterclockwise">
           <Image alt="" src={unitedKingdom} />
-        </div>
+        </CircleBg>
         <p className="mt-12 text-xl font-medium uppercase tracking-huge">
           United Kingdom
         </p>
